@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tembleque reactive library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main id="app">
+            <h1>Tembleque.js</h1>
+            Experimental reactive JavaScript micro library.
+            <hr />
+            <div>
+                Change the 'value' variable here 
+                <input name="sample" |bind|="value" value="" />
+            </div>
+            <ul>
+                <li>{{value}}</li>
+                <li>The value is {{value}}</li>
+            </ul>
+            <div>
+                Or with a button click 
+                <button |click|="changeValue('changed')">Change the value hardcoded</button>
+            </div>            
+            Or from the input on button click too
+            <div>                
+                <input name="other" |bind|="newValue" value="New value" autocomplete="off" />
+                <button |click|="changeValue(newValue)">Change the value binded</button>
+            </div>
+            <hr />
+            Also works for radio groups, checkboxes and select dropdowns
+            <div>
+                <input |bind|="options" type="radio" name="radio" value="one" id="one" />
+                <label for="one">one</label>
+                <input |bind|="options" type="radio" name="radio" value="two" id="two" />
+                <label for="two">two</label>
+                <input |bind|="options" type="radio" name="radio" value="three" id="three" />
+                <label for="three">three</label>
+            </div>
+            <div>
+                From a button 
+                <button |click|="changeOptions('three')">Set three</button>
+            </div>
+            <div>
+                <input |bind|="options" type="checkbox" value="two" id="checkTwo" />
+                <label for="checkTwo">Check two</label>
+            </div>
+            <select |bind|="options" name="list">
+                <option>one</option>
+                <option>two</option>
+                <option>three</option>
+            </select>
+        </main>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background:rgb(11, 74, 74);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 40px;
+    border-radius: 10px;
+    background: white;
+}
+
+h1 {
+    font-size: 26px;
+    margin: 0;
+    color: rgb(76, 155, 155);
+}
+
+button, input {
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 5px;
+    border: 2px solid rgb(177, 230, 230);
+}
+
+button {
+    background: rgb(76, 155, 155);
+    color: white;
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+    display: inline-block;
+    border: none;
+    border-top: 1px solid rgb(177, 230, 230);
+}
