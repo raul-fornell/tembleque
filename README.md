@@ -4,6 +4,8 @@ Tembleque.js is a simple JavaScript library that mimics React, Angular or Vue to
 
 Check how it works [here](http://www.inerciabcn.com/misc/tembleque)
 
+___
+
 Run in Tembleque.js in a browser with: 
 
 ```bash
@@ -11,3 +13,9 @@ npx http-server
 ```
 
 Or any other http web server. No dependencies or installation needed.
+
+___
+
+Sample reactivity in forms:
+
+![screen capture](./assets/tembleque.gif "screen capture")
