@@ -54,7 +54,6 @@ export function setValueToProperty(ref, value) {
 
 export function watchPropertyChange(ref, callBack) {
   const item = getBindableProperty(ref);
-  console.log("REF", ref, callBack);
   item.callBacks.push(callBack);
 }
 
@@ -97,12 +96,6 @@ function defineResponsesToSpecialTags(childNodes) {
         const funcName = el.getAttribute('|click|');
         if (funcName) {
           callFunctionOnClickEvent(el, funcName);
-        }
-        const loop = el.getAttribute('|for|');
-        if (loop) {
-          watchPropertyChange(loop, () => {
-            console.log("PENDING RENDER ON PROPERTY CHANGE");
-          });
         }
       }
       defineResponsesToSpecialTags(el.childNodes)
